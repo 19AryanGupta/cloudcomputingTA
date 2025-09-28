@@ -25,7 +25,9 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-8 pb-6">
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+        <font face="IBM Plex Mono">
+        <b>Introduction to<br>Cloud Computing</b><br>
+        </font>
       </h1>
       <a
         target="_blank"
@@ -42,27 +44,35 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
+      <p style="font-family: 'IBM Plex Mono', monospace;"><font size = 4>
+        Cloud Computing is the delivery of computing services—such as servers, storage, databases, 
+        networking, software, and analytics—over the internet (“the cloud”). Instead of owning physical
+        hardware or infrastructure, users can access these services on demand from cloud providers.
+        <br>
+        It allows individuals and organizations to use computing resources without the need to set up and maintain
+        physical data centers. For example, cloud services like Google Drive or Dropbox let users store and access 
+        files from anywhere, while platforms like AWS, Microsoft Azure, or Google Cloud provide powerful infrastructure 
+        for running applications.
+        <br>
+        Cloud Computing enables flexible resource allocation, scalability, and cost efficiency. It supports a wide 
+        variety of applications such as data storage, web hosting, artificial intelligence, and online collaboration.
+        <br>
+        The first major cloud platforms emerged in the mid-2000s, and today, most modern applications rely on cloud 
+        services in some form.
+        <br>
+        A. Cloud computing services are typically divided into models such as IaaS (Infrastructure as a Service), 
+        PaaS (Platform as a Service), and SaaS (Software as a Service).<br>
+        B. The main deployment models are Public Cloud, Private Cloud, Hybrid Cloud, and Community Cloud.
+        <br>
+        In a cloud network, data and applications are hosted on remote servers and accessed through the internet. 
+        These servers are managed by cloud providers and distributed across multiple locations to ensure reliability 
+        and security. Users (called clients) can scale resources up or down based on their needs, paying only for what they use.
+      </p></font>
+      
       {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
           <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
           </div>
         )
       }
@@ -74,12 +84,28 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       featuredPosts.length > 0 && (
         <>
           <section id="featured" class="pt-12 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
-            <ul>
-              {featuredPosts.map(data => (
-                <Card variant="h3" {...data} />
-              ))}
-            </ul>
+            <h2 class="text-2xl font-semibold tracking-wide"></h2>
+            <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+              <font face="IBM Plex Mono">
+            <b>Research Members</b>
+            </font>
+            </h1>
+            <div class="flex flex-col sm:flex-row items-start my-4 gap-8">
+            <img 
+              src="/assets/prof-dayanand-ambawade.jpg" 
+              alt="Dr. Dayanand Ambawade" 
+              class="rounded-lg shadow-lg w-[260px] h-auto"
+              style="object-fit: cover;"
+            />
+            <div style="font-family: 'IBM Plex Mono', monospace;">
+            <span style="font-size:2rem; font-weight:bold;">Dr. Dayanand Ambawade</span><br>
+            <span style="font-size:1.3rem; font-weight:bold;">Associate Professor</span><br>
+            <span style="font-size:1.1rem;">
+            Ph.D (Mumbai University)<br>
+            M.Tech (Communication) IIT, Bombay<br>
+            B.E. (Electronics)</span>
+            </div>
+            </div>
           </section>
           {recentPosts.length > 0 && <Hr />}
         </>
@@ -89,7 +115,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
+          <h2 class="text-2xl font-semibold tracking-wide">Student Projects</h2>
           <ul>
             {recentPosts.map(
               (data, index) =>
