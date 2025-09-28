@@ -43,7 +43,7 @@ const isActive = (path: string) => {
         href="/"
         class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
       >
-        {SITE.title}
+        Cloud Computing
       </a>
       <nav
         id="nav-menu"
@@ -70,7 +70,7 @@ const isActive = (path: string) => {
         >
           <li class="col-span-2">
             <a href="/posts" class:list={{ "active-nav": isActive("/posts") }}>
-              Projects
+              <span style="display:block; height:0.5em;"></span>Projects
             </a>
           </li>
           <li class="col-span-2">
@@ -80,7 +80,7 @@ const isActive = (path: string) => {
           </li>
           <li class="col-span-2">
             <a href="/about" class:list={{ "active-nav": isActive("/about") }}>
-              About
+              <span style="display:block; height:0.5em;"></span>About
             </a>
           </li>
           {
